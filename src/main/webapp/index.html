@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<base href="/cms/">
+
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./lib/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./lib/datepicker/datepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="./lib/paginator/bootstrap-paginator.min.css" >
+	<link rel="stylesheet" type="text/css" href="./static/menu/css/menu.css">
+	<link rel="stylesheet" type="text/css" href="./lib/cssshake/csshake.min.css">
+	<link media="all" rel="stylesheet" type="text/css" href="./lib/fileupload/css/fileinput.min.css">
+
+</head>
+<body ng-app="cms">
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header" style="margin-left: 20px;">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	      	<img alt="Brand" src="/cms/static/images/anhsw.jpg" style="margin-top: -10px; height: 40px; width: 50px;">
+	      </a>
+	    </div>
+		<p class="navbar-text">走一个</p>
+		
+       <ul class="nav navbar-nav navbar-right">
+		  <li role="presentation">
+		  	<a href="#workorderAlert">
+			  	<div class="shake-constant shake-chunk">
+				  	<i class="fa fa-bell" style="color: red;" aria-hidden="true"></i>
+				  	<span class="badge" style="background-color: red">42</span>
+			  	</div>
+		  	</a>
+		  </li>
+		  <li role="presentation" style="margin-right: 20px;">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">设置<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#password">用户密码设置</a></li>
+<!-- 		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li> -->
+		          </ul>
+		        </li>
+		        <li role="presentation" onclick="logout();"><a href="#">退出<i class="fa fa-power-off"></i></a></li>
+		  </li>
+       </ul>
+	  </div>
+	</nav>	
+	
+	<div class="container-fluid">
+		<div class="col-md-2">
+			<ul id="accordion" class="accordion">
+				<li class="common userInfo">
+					<img style="height: 50px; width: 50px;" src="/cms/static/images/Koala.jpg" alt="..." class="img-circle">
+					&nbsp;&nbsp;&nbsp;张三&nbsp;&nbsp;欢迎您</img><br><br>
+					<div>上次登录时间<br/>2017-05-05 16:24:30</div>
+				</li>
+				<li onclick="mydesktop();">
+					<div class="common desktop"><i class="fa fa-home"></i>我的桌面</div>
+				</li>		
+				<li>
+					<div class="common link"><i class="fa fa-file-text-o" aria-hidden="true"></i>工单管理<i class="fa fa-chevron-down"></i></div>
+					<ul class="leftmenu">
+						<li><a href="#createWorkorder">工单创建</a></li>
+						<li><a href="#workorderMaintenance">附件管理</a></li>
+						<!-- <li><a href="#/workorderAlert">到期预警</a></li> -->
+						<li><a href="#queryWorkorder">归档查询</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="common link"><i class="fa fa-bar-chart" aria-hidden="true"></i>报表管理<i class="fa fa-chevron-down"></i></div>
+					<ul class="leftmenu">
+						<li><a href="#reportWorkorder">工单数据</a></li>
+						<li><a href="#reportCategory">分类数据</a></li>
+						<li><a href="#reportDetail">明细数据</a></li>
+					</ul>
+				</li>
+				<li><div class="common link"><i class="fa fa-certificate" aria-hidden="true"></i>权限管理<i class="fa fa-chevron-down"></i></div>
+					<ul class="leftmenu">
+						<li><a href="#permission">用户权限管理</a></li>
+					</ul>
+				</li>
+				<li><div class="common link"><i class="fa fa-envelope-o" aria-hidden="true"></i>附加功能<i class="fa fa-chevron-down"></i></div>
+					<ul class="leftmenu">
+						<li><a href="#file">文件上传</a></li>
+						<li><a href="">生成文书</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-md-10">
+			<div ng-view></div>
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript" src="./lib/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./static/menu/js/menu.js"></script>
+	<script type="text/javascript" src="./lib/angular-1.2.7/angular.min.js"></script>
+	<script type="text/javascript" src="./lib/angular-1.2.7/angular-route.min.js"></script>
+	<script type="text/javascript" src="./views/routers/mainRouter.js"></script>
+	<script type="text/javascript" src="./lib/datepicker/datepicker.min.js"></script>
+	<script type="text/javascript" src="./lib/datepicker/datepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="./lib/paginator/bootstrap-paginator.min.js"></script>
+	<script type="text/javascript" src="./lib/fileupload/js/fileinput.min.js"></script>
+	<script type="text/javascript" src="./lib/fileupload/js/theme.js"></script>
+	<script type="text/javascript" src="./lib/fileupload/js/fileinput-zh.js"></script>
+	
+	<script type="text/javascript">
+		function mydesktop() {
+			location.href = '/cms/index.html';
+		}
+		function logout() {
+			window.location.href = './ilogin.html';
+		}
+	</script>
+	
+</body>
+</html>

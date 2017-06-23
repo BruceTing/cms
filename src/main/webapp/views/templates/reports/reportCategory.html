@@ -1,0 +1,88 @@
+<ol class="breadcrumb">
+  <li>报表管理</li>
+  <li class="active">分类数据</li>
+</ol>
+
+<div class="row" style="background-color: white;margin-left: 1px; margin-right: 1px;">
+	<div style="padding-top: 20px; padding-left: 30px; padding-bottom: 10px;">
+		<form class="form-inline">
+		  <div class="form-group">
+		    <label for="inputName1">分类</label>
+			<select class="form-control">
+			  <option>食品</option>
+			  <option>药品</option>
+			  <option>化妆品</option>
+			  <option>保健品</option>
+			  <option>机械</option>
+			</select>
+		  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <div class="form-group">
+		    <label for="inputName2">时间</label>
+		    <input class="form-control" data-toggle="datepicker">
+		  </div>
+	
+		  <button type="submit" class="btn btn-primary">查询</button>
+		</form>
+	</div>
+	
+	<div style="margin-left: 20px; margin-right: 20px;">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<td class="col-md-1">序号</td>
+					<td class="col-md-3">FN</td>
+					<td class="col-md-3">LN</td>
+					<td class="col-md-3">UN</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="active">
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr class="active">
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr class="active">
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr class="active">
+					<td>1</td>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>																		
+			</tbody>
+		</table>
+
+		  <div id="paginator" style="margin-left: 350px;"></div>
+		  <a href="#reportCategory" class="btn btn-primary" style="margin-bottom: 20px; margin-right: 20px;" role="button" >
+			<i class="fa fa-share" aria-hidden="true"></i>导出
+		  </a>
+		
+	</div>
+</div>	
+
+
+<script type="text/javascript">
+	$('[data-toggle="datepicker"]').datepicker({
+		autoHide: true,
+		format: 'yyyy-mm-dd',
+		language: 'zh-CN'
+	});
+	
+    var options = {
+        currentPage: 3,
+        totalPages: 10,
+    };
+    $('#paginator').bootstrapPaginator(options);	
+	
+</script>

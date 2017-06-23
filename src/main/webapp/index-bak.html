@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+<body ng-app="cms">
+
+<!-- 	<nav class="navbar navbar-inverse navbar-fixed-top"> -->
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Brand</a>
+	    </div>
+		<p class="navbar-text">Signed in as Mark Otto</p>
+		
+       <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+       </ul>
+	  </div><!-- /.container-fluid -->
+	</nav>	
+	
+	<div class="container-fluid">
+<!-- 	<div class="col-md-2" style="margin: 70px 0px 0px 0px; position: fixed;"> -->
+	<div class="col-md-2">
+<!-- 		<div class="panel-group Collapsible list group" id="accordion" role="tablist" aria-multiselectable="true">
+		  <div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="myHome">
+		      <h4 class="panel-title">
+		      			我的桌面
+		      </h4>		  
+		    </div>
+		  </div>
+		  <div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="myHome">
+		      <h4 class="panel-title">
+		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseHome" aria-expanded="false" aria-controls="collapseHome">
+		          Collapsible Group
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseHome" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myHome">
+		      <div class="panel-body">
+					<ul class="list-group">
+					  <li class="list-group-item">Cras justo odio</li>
+					  <li class="list-group-item">Dapibus ac facilisis in</li>
+					  <li class="list-group-item">Morbi leo risus</li>
+					  <li class="list-group-item">Porta ac consectetur ac</li>
+					  <li class="list-group-item">Vestibulum at eros</li>
+					</ul>
+		      </div>
+		    </div>
+		  </div>
+		  		
+		  <div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="headingOne">
+		      <h4 class="panel-title">
+		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+		          Collapsible Group
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+		      <div class="panel-body">
+					<div class="list-group">
+					  <a href="#" class="list-group-item active">
+					    Cras justo odio
+					  </a>
+					  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+					  <a href="#" class="list-group-item">Morbi leo risus</a>
+					  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+					  <a href="#" class="list-group-item">Vestibulum at eros</a>
+					</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="headingTwo">
+		      <h4 class="panel-title">
+		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		          Collapsible Group
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+		      <div class="panel-body">
+	                <ul id="dashboard-menu1" class="nav nav-list">
+	                    <li><a href="#">微信菜单</a></li>
+	                    <li ><a href="#">系统回复</a></li>
+	                    <li ><a href="users.html">文字回复</a></li>
+	                    <li><a href="index.html">分类管理</a></li>
+	                    <li ><a href="users.html">文章管理</a></li>
+	                </ul>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="headingThree">
+		      <h4 class="panel-title">
+		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		          Collapsible Group
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+		      <div class="panel-body">
+	                <ul id="dashboard-menu1" class="nav nav-list">
+	                    <li><a href="index.html">微信菜单</a></li>
+	                    <li ><a href="users.html">系统回复</a></li>
+	                    <li ><a href="users.html">文字回复</a></li>
+	                    <li><a href="index.html">分类管理</a></li>
+	                    <li ><a href="users.html">文章管理</a></li>
+	                </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div> -->
+
+			<ul id="accordion" class="accordion">
+				<li onclick="mydesktop();">
+					<div class="desktop"><i class="fa fa-home"></i>我的桌面</div>
+				</li>		
+				<li>
+					<div class="link"><i class="fa fa-code"></i>工单管理<i class="fa fa-chevron-down"></i></div>
+					<ul class="leftmenu">
+						<li><a href="#/createworkorder">工单创建</a></li>
+						<li><a href="#/workordermaintenance">工单维护</a></li>
+						<li><a href="#/workorderalert">工单预警管理</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="link"><i class="fa fa-mobile"></i>报表管理<i class="fa fa-chevron-down"></i></div>
+					<ul class="leftmenu">
+						<li><a href="#/reports">报表检索导出</a></li>
+					</ul>
+				</li>
+				<li><div class="link"><i class="fa fa-globe"></i>权限管理<i class="fa fa-chevron-down"></i></div>
+					<ul class="leftmenu">
+						<li><a href="#/roles">用户角色管理</a></li>
+					</ul>
+				</li>
+			</ul>
+	</div>
+
+<!-- 		<div class="col-md-10" style="margin: 70px 0px 0px 260px"> -->
+			<div class="col-md-10">
+			
+			<div ng-view></div>
+		  		  
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		function mydesktop() {
+			location.href = '/cms/index.html';
+		}
+	</script>
+	
+	<script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/leftmenu.js"></script>
+
+	<script type="text/javascript" src="routers/mainRouter.js"></script>
+	<script type="text/javascript" src="lib/angular-1.2.7/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular-1.2.7/angular-route.min.js"></script>
+
+</body>
+</html>

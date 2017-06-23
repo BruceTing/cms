@@ -1,0 +1,31 @@
+<ol class="breadcrumb">
+  <li>附加功能</li>
+  <li class="active">文件上传</li>
+</ol>
+
+<div class="row" style="background-color: white;margin-left: 1px; margin-right: 1px;">
+	<form class="form-horizontal" style="padding-top: 20px; padding-left: 80px;">
+	  <div class="form-group">
+	    <label for="InputFile" class="col-md-2 col-md-offset-1 control-label">文件</label>
+	    <div class="col-md-6">
+	      <input id="input-fa" name="inputfa[]" type="file" multiple class="file-loading">
+	    </div>
+	  </div>
+	</form>	
+</div>	
+
+
+<script type="text/javascript">
+	//initialize with defaults
+	//$("#input-id").fileinput();
+	 
+	// with plugin options
+	$("#input-fa").fileinput({
+		showUpload:true, 
+		previewFileType:'any',
+		theme:'fa',
+	    uploadUrl: "/file-upload-batch/2"
+	});
+	
+</script>
+	  		  
